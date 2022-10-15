@@ -1,11 +1,38 @@
 # see https://docs.searxng.org/admin/engines/settings.html#use-default-settings
-use_default_settings: true
+use_default_settings:
+  engines:
+    remove:
+      - vimeo
+      - deviantart
+engines:
+  - name: brave
+    disabled: true
+  - name: qwant
+    disabled: true
+  - name: duckduckgo
+    disabled: true
+  - name: wikidata
+    disabled: true
+  - name: bing
+    disabled: true
+  - name: tineye
+    disabled: true
+  - name: lingva
+    disabled: true
+  - name: dictzone
+    disabled: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
+  secret_key: "6730985aa88159d2bb445040da9420c6e511c16958af71f3131280a4f3e884af"  # change this!
   limiter: true  # can be disabled for a private instance
+  method: "GET"
   image_proxy: true
 ui:
   static_use_hash: true
+  infinite_scroll: true
 redis:
   url: redis://redis:6379/0
+search:
+  autocomplete: "google"
+general:
+  instance_name: "NonGoogle"
