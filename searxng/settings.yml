@@ -14,7 +14,7 @@ engines:
   - name: wikidata
     disabled: true
   - name: bing
-    disabled: true
+    disabled: false
   - name: tineye
     disabled: true
   - name: lingva
