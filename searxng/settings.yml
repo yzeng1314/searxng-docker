@@ -21,6 +21,18 @@ engines:
     disabled: true
   - name: dictzone
     disabled: true
+  - name: wikibooks
+    disabled: true
+  - name: wikiquote
+    disabled: true
+  - name: wikisource
+    disabled: true
+  - name: wikispecies
+    disabled: true
+  - name: wikiversity
+    disabled: true
+  - name: wikivoyage
+    disabled: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
   secret_key: "6730985aa88159d2bb445040da9420c6e511c16958af71f3131280a4f3e884af"  # change this!
@@ -34,5 +46,6 @@ redis:
   url: redis://redis:6379/0
 search:
   autocomplete: "google"
+  default_lang: "all"
 general:
   instance_name: "NonGoogle"
